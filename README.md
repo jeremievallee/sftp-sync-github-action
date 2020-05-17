@@ -16,6 +16,8 @@ Just a test as this is my first Github action.
 
 ## Example usage
 
+```yaml
 uses: jeremievallee/sftp-sync-github-action@v1
 with:
   test: 'Mona the Octocat'
+```
