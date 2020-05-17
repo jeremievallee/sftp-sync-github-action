@@ -3,6 +3,6 @@
 echo "Hello, ${1}!"
 time=$(date)
 
-ls -lh
+ls -lh /github/workspace
 
 echo "::set-output name=anothertest::$time"
