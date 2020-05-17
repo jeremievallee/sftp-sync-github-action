@@ -10,5 +10,5 @@ time=$(date)
 ls -lh /github/workspace
 
 printf "%s" "ls -lh" > $SFTP_COMMANDS_FILE
-sshpass -e sftp -b $SFTP_COMMANDS_FILE -o StrictHostKeyChecking=no $1@$2
+sshpass -e sftp -o BatchMode=no -o StrictHostKeyChecking=no -b - $1@$2 < $SFTP_COMMANDS_FILE
 echo "::set-output name=anothertest::$time"
