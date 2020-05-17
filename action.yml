@@ -9,12 +9,14 @@ inputs:
     description: 'SFTP Host'
     required: true
     default: 'localhost'
-outputs:
-  anothertest:
-    description: 'An output test'
+  localdir:
+    description: 'Local directory to upload to server on /'
+    required: true
+    default: 'test'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.username }}
     - ${{ inputs.host }}
+    - ${{ inputs.localdir }}
