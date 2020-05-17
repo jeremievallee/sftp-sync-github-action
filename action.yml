@@ -1,10 +1,14 @@
 name: 'SFTP Sync'
 description: 'Sync repository with SFTP server'
 inputs:
-  test:
-    description: 'An input test'
+  username:
+    description: 'SFTP User'
     required: true
-    default: 'Jeje'
+    default: 'tom'
+  host:
+    description: 'SFTP Host'
+    required: true
+    default: 'localhost'
 outputs:
   anothertest:
     description: 'An output test'
@@ -12,4 +16,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.test }}
+    - ${{ inputs.username }}
+    - ${{ inputs.host }}
