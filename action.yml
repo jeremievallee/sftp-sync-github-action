@@ -1,0 +1,15 @@
+name: 'SFTP Sync'
+description: 'Sync repository with SFTP server'
+inputs:
+  test:
+    description: 'An input test'
+    required: true
+    default: 'Jeje'
+outputs:
+  anothertest:
+    description: 'An output test'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.test }}
